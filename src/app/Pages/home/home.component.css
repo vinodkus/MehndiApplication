@@ -1,8 +1,11 @@
-#home {
-    padding-top: 20px;
-  }
-
-  .card-img-top {
-    height: 150px;
-    object-fit: cover;
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+.btn-custom {
+  margin-top: 20px;
 }
