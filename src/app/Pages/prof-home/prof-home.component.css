@@ -1,4 +1,38 @@
-.card-img-top {
-    height: 150px;
+body {
+    background: #f7f7f7;
+}
+.navbar {
+    background-color: #6a11cb;
+}
+.navbar-brand {
+    color: #fff;
+}
+.navbar-nav .nav-link {
+    color: #fff;
+}
+.content {
+    padding: 20px;
+}
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+.btn-primary {
+    background: #6a11cb;
+    border: none;
+}
+.btn-primary:hover {
+    background: #550a8a;
+}
+.profile-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
     object-fit: cover;
+}
+.card-header {
+    background: #6a11cb;
+    color: white;
 }

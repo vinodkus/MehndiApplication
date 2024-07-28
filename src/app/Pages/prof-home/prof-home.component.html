@@ -1,49 +1,53 @@
-<div class="container mt-3">
-    <h1 class="text-center mb-3">Welcome, Mehndi Artist!</h1>
-    <p class="text-center">Complete your profile and manage your bookings.</p>
-    <div class="alert alert-info" role="alert">
-        <strong>Profile Incomplete!</strong> Please complete your profile to attract more clients.
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">MehndiApp</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="signin.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>                  
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="content">
+        <h2>Professionals</h2>
+        <div class="card mb-4">
+            <div class="card-body d-flex">
+                <img src="assets/profilePic/pic1.jpeg" class="profile-img me-3" alt="Profile Picture 1">
+                <div>
+                    <h5>John Doe</h5>
+                    <p class="text-muted">Bridal & Traditional Mehndi Expert</p>
+                    <p><strong>Location:</strong> 123 Main Street, Anytown</p>
+                    <p><strong>Experience:</strong> 10 years</p>
+                    <a href="professional-detail.html" class="btn btn-primary btn-sm">View Details</a>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-4">
+            <div class="card-body d-flex">
+                <img src="./assets/profilePic/pic1.jpeg" class="profile-img me-3" alt="Profile Picture 2">
+                <div>
+                    <h5>Jane Smith</h5>
+                    <p class="text-muted">Contemporary & Festive Mehndi Artist</p>
+                    <p><strong>Location:</strong> 456 Elm Street, Anycity</p>
+                    <p><strong>Experience:</strong> 8 years</p>
+                    <a href="professional-detail.html" class="btn btn-primary btn-sm">View Details</a>
+                </div>
+            </div>
+        </div>
+        <!-- Add more professional cards as needed -->
     </div>
-    <h3 class="mb-3">Pending Booking Requests</h3>
-    <div class="row gy-3">
-        <div class="col-12">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Booking Request 1</h5>
-                    <p class="card-text">Client: Jane Doe<br>Date: 25th Dec 2024<br>Location: Client's Home</p>
-                    <a href="#" class="btn btn-success">Accept</a>
-                    <a href="#" class="btn btn-danger">Reject</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-12">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Booking Request 2</h5>
-                    <p class="card-text">Client: Anna Smith<br>Date: 26th Dec 2024<br>Location: Professional's Location</p>
-                    <a href="#" class="btn btn-success">Accept</a>
-                    <a href="#" class="btn btn-danger">Reject</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <h3 class="mt-4 mb-3">Profile and Designs</h3>
-    <div class="row gy-3">
-        <div class="col-12">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Update Profile</h5>
-                    <a href="#" class="btn btn-primary">Go to Profile</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-12">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Manage Designs</h5>
-                    <a href="#" class="btn btn-primary">Go to Designs</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
