@@ -3,8 +3,14 @@ import { Routes } from '@angular/router';
 import { HomeComponent } from './Pages/home/home.component';
 import { LayoutComponent } from './Pages/layout/layout.component';
 import { ClientHomeComponent } from './Pages/client-home/client-home.component';
-import { ProfHomeComponent } from './Pages/prof-home/prof-home.component';
 import { LoginComponent } from './Pages/login/login.component';
+import { ViewDetailsComponent } from './Pages/view-details/view-details.component';
+import { ProfLeftMenuComponent } from './Professionals/prof-left-menu/prof-left-menu.component';
+import { ProfDashboardComponent } from './Professionals/prof-dashboard/prof-dashboard.component';
+import { ProfProfileComponent } from './Professionals/prof-profile/prof-profile.component';
+import { ProfRequestComponent } from './Professionals/prof-request/prof-request.component';
+import { ProfServicesComponent } from './Professionals/prof-services/prof-services.component';
+import { ProfSettingsComponent } from './Professionals/prof-settings/prof-settings.component';
 
 
 export const routes: Routes = [
@@ -34,11 +40,30 @@ export const routes: Routes = [
             {
                 path:'clientHome',component:ClientHomeComponent
             }
-            ,
+           ,
+            { path: 'view-details', component: ViewDetailsComponent },
+        ]      
+    },
+    {
+        path:'',
+        component:ProfLeftMenuComponent,
+        children:[
             {
-                path:'profHome',component:ProfHomeComponent
-            }
+                path:'professional/prof-dashboard',component:ProfDashboardComponent
+            },
+            {
+                path:'professional/prof-profile',component:ProfProfileComponent
+            },
+            {
+                path:'professional/prof-request',component:ProfRequestComponent
+            },
+            {
+                path:'professional/prof-services',component:ProfServicesComponent
+            },
+            {
+                path:'professional/prof-settings',component:ProfSettingsComponent
+            },
+            
         ]
-        //component:HomeComponent
     }
 ];

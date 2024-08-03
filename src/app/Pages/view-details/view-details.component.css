@@ -36,3 +36,10 @@ body {
     background: #6a11cb;
     color: white;
 }
+.mehndi-samples img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-right: 10px;
+}

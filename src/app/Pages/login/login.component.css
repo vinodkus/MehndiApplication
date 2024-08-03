@@ -1,4 +1,44 @@
-.container {
-    max-width: 400px;
-    margin-top: 50px;
+.container-fluid{
+    background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+    min-height: 100vh;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+.card-header {
+    background: #6a11cb;
+    color: white;
+    border-radius: 20px 20px 0 0;
+    padding: 1.5rem;
+    text-align: center;
+}
+.form-control, .btn {
+    border-radius: 10px;
+}
+.btn-primary {
+    background: #6a11cb;
+    border: none;
+}
+.btn-primary:hover {
+    background: #550a8a;
+}
+.btn-google {
+    background: #ea4335;
+    border: none;
+}
+.btn-google:hover {
+    background: #c3321a;
+}
+.btn-facebook {
+    background: #3b5998;
+    border: none;
+}
+.btn-facebook:hover {
+    background: #2a4279;
 }

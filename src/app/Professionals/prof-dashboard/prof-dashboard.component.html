@@ -1,0 +1,48 @@
+<div class="content">
+    <div class="header">
+        <h2>Welcome, [Professional Name]</h2>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">New Requests</h5>
+                    <p class="card-text">You have 5 new requests.</p>
+                    <a [routerLink]="['/professional/prof-request']" class="btn btn-primary">View Requests</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">My Services</h5>
+                    <p class="card-text">Manage your services.</p>
+                    <a [routerLink]="['/professional/prof-services']" class="btn btn-primary">Edit Services</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Profile Settings</h5>
+                    <p class="card-text">Update your profile information.</p>
+                    <a [routerLink]="['/professional/prof-profile']" class="btn btn-primary">Edit Profile</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-12">
+            <h5>Recent Activity</h5>
+            <div class="card">
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Request from Jane Smith for Bridal Mehndi on July 25th.</li>
+                        <li class="list-group-item">Request from Maria Garcia for Traditional Mehndi on July 30th.</li>
+                        <li class="list-group-item">Request from Emily Johnson for Arabic Mehndi on August 1st.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

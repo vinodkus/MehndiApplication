@@ -1,0 +1,59 @@
+<div class="content">
+    <h2>Services</h2>
+    <div class="card">
+        <div class="card-header">
+            <h3>Add New Service</h3>
+        </div>
+        <div class="card-body">
+            <form>
+                <div class="mb-3">
+                    <label for="serviceName" class="form-label">Service Name</label>
+                    <input type="text" class="form-control" id="serviceName" placeholder="Enter service name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="serviceDescription" class="form-label">Service Description</label>
+                    <textarea class="form-control" id="serviceDescription" rows="3" placeholder="Enter service description" required></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="servicePrice" class="form-label">Service Price</label>
+                    <input type="number" class="form-control" id="servicePrice" placeholder="Enter service price" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Add Service</button>
+            </form>
+        </div>
+    </div>
+    <h3 class="mt-4">Existing Services</h3>
+    <div class="card">
+        <div class="card-body">
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h5>Bridal Mehndi</h5>
+                            <p>A beautiful and intricate bridal mehndi design.</p>
+                            <span>Price: $150</span>
+                        </div>
+                        <div>
+                            <button class="btn btn-primary btn-sm">Edit</button>
+                            <button class="btn btn-danger btn-sm">Delete</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h5>Traditional Mehndi</h5>
+                            <p>A classic and elegant mehndi design for traditional events.</p>
+                            <span>Price: $100</span>
+                        </div>
+                        <div>
+                            <button class="btn btn-primary btn-sm">Edit</button>
+                            <button class="btn btn-danger btn-sm">Delete</button>
+                        </div>
+                    </div>
+                </li>
+                <!-- More services can be added here -->
+            </ul>
+        </div>
+    </div>
+</div>

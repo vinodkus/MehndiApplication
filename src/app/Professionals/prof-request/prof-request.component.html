@@ -1,0 +1,60 @@
+<div class="content">
+    <h2>Requests</h2>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Request from Jane Doe</h5>
+            <p class="card-text"><strong>Email:</strong> jane.doeexample.com</p>
+            <p class="card-text"><strong>Message:</strong> I would like to book a Mehndi session for my wedding.</p>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#acceptModal">Accept</button>
+            <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#declineModal">Decline</button>
+        </div>
+    </div>
+</div>
+
+<!-- Accept Modal -->
+<div class="modal fade" id="acceptModal" tabindex="-1" aria-labelledby="acceptModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="acceptModalLabel">Accept Request</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>You have accepted the request from Jane Doe. Please confirm the details and arrange a session.</p>
+                <form id="acceptForm">
+                    <div class="mb-3">
+                        <label for="sessionDate" class="form-label">Session Date</label>
+                        <input type="date" class="form-control" id="sessionDate" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="sessionTime" class="form-label">Session Time</label>
+                        <input type="time" class="form-control" id="sessionTime" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Confirm</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Decline Modal -->
+<div class="modal fade" id="declineModal" tabindex="-1" aria-labelledby="declineModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="declineModalLabel">Decline Request</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>You have declined the request from Jane Doe. Please provide a reason for declining.</p>
+                <form id="declineForm">
+                    <div class="mb-3">
+                        <label for="declineReason" class="form-label">Reason</label>
+                        <textarea class="form-control" id="declineReason" rows="3" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-secondary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

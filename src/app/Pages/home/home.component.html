@@ -1,8 +1,32 @@
-<div class="container hero">
-    <h1>Welcome to Mehndi Service App</h1>
-    <p>Your one-stop solution for finding and booking Mehndi professionals for any occasion.</p>
-    <div class="btn-group" role="group">
-        <a href="/login" class="btn btn-primary btn-lg btn-custom">Log In</a>
-        <a href="/signup" class="btn btn-secondary btn-lg btn-custom">Sign Up</a>
-    </div>
-</div>
+<body>
+    <div class="content">
+      <h2>Professionals</h2>
+      <div class="card mb-4">
+          <div class="card-body d-flex">
+              <img src="assets/profilePic/pic1.jpeg" class="profile-img me-3" alt="Profile Picture 1">
+              <div>
+                  <h5>John Doe</h5>
+                  <p class="text-muted">Bridal & Traditional Mehndi Expert</p>
+                  <p><strong>Location:</strong> 123 Main Street, Anytown</p>
+                  <p><strong>Experience:</strong> 10 years</p>
+                  <a [routerLink]="['/view-details']" class="btn btn-primary btn-sm">View Details</a>
+              </div>
+          </div>
+      </div>
+      <div class="card mb-4">
+          <div class="card-body d-flex">
+              <img src="./assets/profilePic/pic1.jpeg" class="profile-img me-3" alt="Profile Picture 2">
+              <div>
+                  <h5>Jane Smith</h5>
+                  <p class="text-muted">Contemporary & Festive Mehndi Artist</p>
+                  <p><strong>Location:</strong> 456 Elm Street, Anycity</p>
+                  <p><strong>Experience:</strong> 8 years</p>
+                  <a [routerLink]="['/view-details']" class="btn btn-primary btn-sm">View Details</a>                        
+                  <!-- <a href="professional-detail.html" class="btn btn-primary btn-sm">View Details</a> -->
+              </div>
+          </div>
+      </div>
+      <!-- Add more professional cards as needed -->
+  </div>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>

@@ -1,0 +1,77 @@
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">MehndiApp</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="signin.html">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>  
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="content">
+    <h2>Professional Details</h2>
+    <div class="card">
+        <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+                <img src="assets/profilePic/pic1.jpeg" class="profile-img me-3" alt="Profile Picture 1">
+                <div>
+                    <h4>John Doe</h4>
+                    <p class="text-muted">Bridal & Traditional Mehndi Expert</p>
+                </div>
+            </div>
+            <p><strong>Experience:</strong> 10 years</p>
+            <p><strong>Location:</strong> 123 Main Street, Anytown</p>
+            <p><strong>Contact:</strong> john.doeexample.com | +123 456 7890</p>
+            <p><strong>About:</strong> John is a highly skilled mehndi artist specializing in intricate bridal designs and traditional patterns. With over 10 years of experience, he has been a part of many memorable events and has a keen eye for detail.</p>
+            <div class="mehndi-samples mb-3">
+                <h5>Sample Designs:</h5>
+                <div class="d-flex">
+                    <img src="assets/mehndiSample/m1.jpeg" alt="Mehndi Design 1">
+                    <img src="assets/mehndiSample/m2.jpeg" alt="Mehndi Design 2">
+                    <img src="assets/mehndiSample/m3.jpeg" alt="Mehndi Design 3">
+                </div>
+            </div>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#requestModal">Send Request</button>
+        </div>
+    </div>
+</div>
+
+<!-- Request Modal -->
+<div class="modal fade" id="requestModal" tabindex="-1" aria-labelledby="requestModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="requestModalLabel">Send Request</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="requestForm">
+                    <div class="mb-3">
+                        <label for="userName" class="form-label">Your Name</label>
+                        <input type="text" class="form-control" id="userName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="userEmail" class="form-label">Your Email</label>
+                        <input type="email" class="form-control" id="userEmail" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="userMessage" class="form-label">Message</label>
+                        <textarea class="form-control" id="userMessage" rows="3" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Request</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
