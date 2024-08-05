@@ -1,0 +1,37 @@
+<body>
+<div class="card">
+    <div class="card-body">
+        <h3 class="card-title text-center mb-4">Professional Signup</h3>
+        <form id="professionalSignupForm">
+            <div class="mb-3">
+                <label for="fullName" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="fullName" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="phoneNumber" class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" id="phoneNumber" required>
+            </div>
+            <div class="mb-3">
+                <label for="experience" class="form-label">Experience (Years)</label>
+                <input type="number" class="form-control" id="experience" required>
+            </div>
+            <div class="mb-3">
+                <label for="profilePic" class="form-label">Profile Picture</label>
+                <input type="file" class="form-control" id="profilePic" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" required>
+            </div>
+            <div class="d-grid">
+                <button type="submit" class="btn btn-primary">Sign Up</button>
+            </div>
+            <p class="text-center mt-3">Already have an account? <a [routerLink]="['/login']">Login</a></p>
+        </form>
+    </div>
+</div>
+</body>

@@ -11,6 +11,8 @@ import { ProfProfileComponent } from './Professionals/prof-profile/prof-profile.
 import { ProfRequestComponent } from './Professionals/prof-request/prof-request.component';
 import { ProfServicesComponent } from './Professionals/prof-services/prof-services.component';
 import { ProfSettingsComponent } from './Professionals/prof-settings/prof-settings.component';
+import { SignupProfessionalComponent } from './signup-professional/signup-professional.component';
+import { SignupCustomerComponent } from './signup-customer/signup-customer.component';
 
 
 export const routes: Routes = [
@@ -21,8 +23,13 @@ export const routes: Routes = [
 
     },
     {
-        path:'signup',  
-        component:SignUpComponent
+        path:'signup-professional',  
+        component:SignupProfessionalComponent
+    }
+    ,
+    {
+        path:'signup-customer',  
+        component:SignupCustomerComponent
     }
     ,
     {

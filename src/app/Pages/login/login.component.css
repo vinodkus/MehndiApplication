@@ -1,11 +1,10 @@
-.container-fluid{
+body {
     background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
     min-height: 100vh;
-    /* display: flex; */
+    display: flex;
     align-items: center;
     justify-content: center;
 }
-
 .card {
     border: none;
     border-radius: 20px;
@@ -17,6 +16,14 @@
     border-radius: 20px 20px 0 0;
     padding: 1.5rem;
     text-align: center;
+}
+.nav-tabs .nav-link {
+    border-radius: 10px;
+    border: none;
+}
+.nav-tabs .nav-link.active {
+    background: #6a11cb;
+    color: white;
 }
 .form-control, .btn {
     border-radius: 10px;
