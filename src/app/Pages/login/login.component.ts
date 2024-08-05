@@ -17,6 +17,7 @@ export class LoginComponent {
   onProfessionalSignIn(): void {
     // Here you would handle the authentication logic
     // If authentication is successful, navigate to the Professional Dashboard
+    
     this.router.navigate(['/professional/prof-dashboard']);
   }
   onCustomerSignIn(): void {
