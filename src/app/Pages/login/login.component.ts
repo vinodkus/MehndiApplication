@@ -13,16 +13,33 @@ import { RouterModule } from '@angular/router';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
+  profObj:any={
+    userName:'akshay',
+    password:'1234'
+  
+  }
+  custObj:any={
+    userName:'',
+    password:''
+  }
   constructor(private router: Router) {}
   onProfessionalSignIn(): void {
     // Here you would handle the authentication logic
     // If authentication is successful, navigate to the Professional Dashboard
-    
+    if(this.profObj.userName=='akshay' && this.profObj.password=='1234'){
     this.router.navigate(['/professional/prof-dashboard']);
+    }
+      else{
+        alert('Invalid Credentials');    
+      }
   }
   onCustomerSignIn(): void {
-    this.router.navigate(['/home']);
-
+    debugger;
+    if(this.custObj.userName=='vinod' && this.custObj.password=='1234'){
+    this.router.navigate(['/home']);}
+    else{
+      alert('Invalid Credentials');    
+    }
   }
 
 }
