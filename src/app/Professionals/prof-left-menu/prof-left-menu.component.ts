@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 import { RouterLink, RouterModule, Routes } from '@angular/router';
+import { InternalService } from '../../Services/internal.service';
 
 @Component({
   selector: 'app-prof-left-menu',
@@ -10,5 +11,15 @@ import { RouterLink, RouterModule, Routes } from '@angular/router';
   styleUrl: './prof-left-menu.component.css'
 })
 export class ProfLeftMenuComponent {
+  /**
+   *
+   */
+  constructor(private router: Router, private internalService:InternalService) {
+    
+  }
+  logout(){
+    this.internalService.stopInterval();
+    this.router.navigate(['/login']);
+  }
 
 }

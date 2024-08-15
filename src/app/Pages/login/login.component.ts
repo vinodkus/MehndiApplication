@@ -1,9 +1,11 @@
-import { Component } from '@angular/core';
+import { InternalService } from './../../Services/internal.service';
+import { Component, Inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { ProfessionalService } from '../../Services/professional.service';
 
 @Component({
   selector: 'app-login',
@@ -14,24 +16,44 @@ import { RouterModule } from '@angular/router';
 })
 export class LoginComponent {
   profObj:any={
-    userName:'akshay',
-    password:'1234'
+    Email:'',
+    password:''
   
   }
   custObj:any={
     userName:'',
     password:''
   }
-  constructor(private router: Router) {}
-  onProfessionalSignIn(): void {
+  // private internalService=Inject(InternalService);
+  constructor(private router: Router, private internalService:InternalService,private professionalService: ProfessionalService) { }
+  async onProfessionalSignIn(){
+    try{
+      debugger;
+       this.professionalService.loginProfessional(this.profObj).subscribe(
+        (response) =>{
+          if(response.token)
+          {
+             // Store token in localStorage or as per your application design
+             localStorage.setItem('authToken',response.token);
+            this.internalService.startInterval();
+             this.router.navigate(['/professional/prof-dashboard']);
+          }else {
+            // Handle login failure
+            alert('Invalid login credentials');
+          }
+        }
+       )
+        
+
+    }
+    catch(error)
+    {
+
+    };
+    
     // Here you would handle the authentication logic
     // If authentication is successful, navigate to the Professional Dashboard
-    if(this.profObj.userName=='akshay' && this.profObj.password=='1234'){
-    this.router.navigate(['/professional/prof-dashboard']);
-    }
-      else{
-        alert('Invalid Credentials');    
-      }
+    
   }
   onCustomerSignIn(): void {
     debugger;
