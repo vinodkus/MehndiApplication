@@ -2,31 +2,35 @@
 <div class="card">
     <div class="card-body">
         <h3 class="card-title text-center mb-4">Professional Signup</h3>
-        <form id="professionalSignupForm">
+        <form  id="professionalSignupForm" (ngSubmit)="onSignupProfessional()">
             <div class="mb-3">
                 <label for="fullName" class="form-label">Full Name</label>
-                <input type="text" class="form-control" id="fullName" required>
+                <input type="text" class="form-control" name="FullName" id="FullName" [(ngModel)]="professional.FullName" required>
             </div>
             <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" required>
+                <input type="email" class="form-control" name="Email" id="Email" [(ngModel)]="professional.Email"  required>
             </div>
             <div class="mb-3">
                 <label for="phoneNumber" class="form-label">Phone Number</label>
-                <input type="tel" class="form-control" id="phoneNumber" required>
+                <input type="tel" class="form-control" name="PhoneNumber" id="PhoneNumber" [(ngModel)]="professional.PhoneNumber"  required>
             </div>
             <div class="mb-3">
                 <label for="experience" class="form-label">Experience (Years)</label>
-                <input type="number" class="form-control" id="experience" required>
+                <input type="number" class="form-control" name="ExperienceYears" id="ExperienceYears" [(ngModel)]="professional.ExperienceYears" required>
             </div>
-            <div class="mb-3">
+            <!-- <div class="mb-3">
                 <label for="profilePic" class="form-label">Profile Picture</label>
-                <input type="file" class="form-control" id="profilePic" required>
-            </div>
+                <input type="file" class="form-control" name="profilePic" id="profilePic" (change)="onFileSelected($event)"  required>
+            </div> -->
             <div class="mb-3">
                 <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="password" required>
+                <input type="password" class="form-control" name="Password" [(ngModel)]="professional.Password" id="Password" required>
             </div>
+            <div class="mb-3">
+                <label for="confirmPassword" class="form-label">Confirm Password</label>
+                <input type="password" class="form-control" name="ConfirmPassword" id="ConfirmPassword" [(ngModel)]="professional.ConfirmPassword" required>
+              </div>
             <div class="d-grid">
                 <button type="submit" class="btn btn-primary">Sign Up</button>
             </div>
