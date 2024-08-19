@@ -1,7 +1,7 @@
 <div class="content">
     <div class="profile-header">
         <img src="assets/profilePic/pic1.jpeg" alt="Profile Picture">
-        <h2>[Professional Name]</h2>
+        <h2>{{profFullName}}</h2>
         <p>Mehndi Artist</p>
     </div>
     <div class="row">
@@ -11,18 +11,30 @@
                     <h3>Personal Information</h3>
                 </div>
                 <div class="card-body">
-                    <form>
+                    <form id="PersonalInfoForm" (ngSubmit)="onPersonalInfoSubmit()">
                         <div class="mb-3">
                             <label for="fullName" class="form-label">Full Name</label>
-                            <input type="text" class="form-control" id="fullName" value="[Professional Name]" required>
+                            <input type="text" class="form-control" name="FullName" id="FullName" value="[Professional Name]" required>
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" value="professional@example.com" required>
+                            <input type="email" class="form-control" name="Email" id="Email" value="professional@example.com" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="PhoneNumber" class="form-label">Primary Phone Number</label>
+                            <input type="tel" class="form-control" name="PhoneNumber" id="PhoneNumber" value="professional@example.com" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="PhoneNumber" class="form-label">Alternate Number</label>
+                            <input type="tel" class="form-control" name="AlternateNumber" id="AlternateNumber" value="professional@example.com" required>
                         </div>
                         <div class="mb-3">
                             <label for="location" class="form-label">Location</label>
-                            <input type="text" class="form-control" id="location" value="[Location]" required>
+                            <input type="text" class="form-control" id="location" value="Location" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="location" class="form-label">Experience</label>
+                            <input type="text" class="form-control" name="ExperienceYears" id="ExperienceYears"  value="Experience" required>
                         </div>
                         <button type="submit" class="btn btn-primary w-100">Update Information</button>
                     </form>

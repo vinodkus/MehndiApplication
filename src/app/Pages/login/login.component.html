@@ -9,10 +9,10 @@
                 <div class="card-body">
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="professional-tab" data-bs-toggle="tab" data-bs-target="#professional" type="button" role="tab" aria-controls="professional" aria-selected="true">Professional</button>
+                            <button class="nav-link active" id="professional-tab" data-bs-toggle="tab" data-bs-target="#professional" type="button" role="tab" aria-controls="professional" aria-selected="true" (click)="toggelSignUp()">Professional</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="customer-tab" data-bs-toggle="tab" data-bs-target="#customer" type="button" role="tab" aria-controls="customer" aria-selected="false">Customer</button>
+                            <button class="nav-link" id="customer-tab" data-bs-toggle="tab" data-bs-target="#customer" type="button" role="tab" aria-controls="customer" aria-selected="false" (click)="toggelSignUp()" >Customer</button>
                         </li>
                     </ul>
                     <div class="tab-content" id="myTabContent">
@@ -66,10 +66,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-footer text-center">
+                <div class="card-footer text-center" *ngIf="isVisible">
                     <p>Don't have a Professional account? <a [routerLink]="['/signup-professional']" id="signup-link" class="text-decoration-none" style="color: #6a11cb;">Sign Up</a></p>
                 </div>
-                <div class="card-footer text-center">
+                <div class="card-footer text-center" *ngIf="!isVisible">
                     <p>Don't have a Customer account? <a [routerLink]="['/signup-customer']"  id="signup-link" class="text-decoration-none" style="color: #6a11cb;">Sign Up</a></p>
                 </div>
             </div>

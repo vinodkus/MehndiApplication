@@ -1,38 +1,37 @@
 <div class="content">
-    <h2>Services</h2>
+    <h2>Mehndi Designs</h2>
     <div class="card">
         <div class="card-header">
-            <h3>Add New Service</h3>
+            <h3>Add New Design</h3>
         </div>
         <div class="card-body">
-            <form  id="profServicesForm" (ngSubmit)="onProfServiceSubmit()">
+            <form>
                 <div class="mb-3">
-                    <label for="serviceName" class="form-label">Service Name</label>
-                    <input type="text" class="form-control" id="ServiceName" 
-                    name="ServiceName" [(ngModel)]="serices.ServiceName" placeholder="Enter service name" required>
+                    <label for="designName" class="form-label">Design Name</label>
+                    <input type="text" class="form-control" id="designName" placeholder="Enter design name" required>
                 </div>
                 <div class="mb-3">
-                    <label for="serviceDescription" class="form-label">Service Description</label>
-                    <textarea class="form-control" id="ServiceDescription" name="ServiceDescription" [(ngModel)]="serices.ServiceDescription" rows="3" placeholder="Enter service description" required></textarea>
+                    <label for="designDescription" class="form-label">Design Description</label>
+                    <textarea class="form-control" id="designDescription" rows="3" placeholder="Enter design description" required></textarea>
                 </div>
                 <div class="mb-3">
-                    <label for="servicePrice" class="form-label">Service Price</label>
-                    <input type="number" class="form-control" id="Price" name="Price" [(ngModel)]="serices.Price"  placeholder="Enter service price" required>
+                    <label for="designImage" class="form-label">Design Image</label>
+                    <input type="file" class="form-control" id="designImage" accept="image/*" required>
                 </div>
-                <button type="submit" class="btn btn-primary w-100">Add Service</button>
+                <button type="submit" class="btn btn-primary w-100">Add Design</button>
             </form>
         </div>
     </div>
-    <h3 class="mt-4">Existing Services</h3>
+    <h3 class="mt-4">Existing Designs</h3>
     <div class="card">
         <div class="card-body">
             <ul class="list-group">
                 <li class="list-group-item">
                     <div class="d-flex justify-content-between align-items-center">
                         <div>
-                            <h5>Bridal Mehndi</h5>
+                            <img src="images/design1.jpg" alt="Bridal Design" class="design-image">
+                            <h5>Bridal Design</h5>
                             <p>A beautiful and intricate bridal mehndi design.</p>
-                            <span>Price: $150</span>
                         </div>
                         <div>
                             <button class="btn btn-primary btn-sm">Edit</button>
@@ -43,9 +42,9 @@
                 <li class="list-group-item">
                     <div class="d-flex justify-content-between align-items-center">
                         <div>
-                            <h5>Traditional Mehndi</h5>
+                            <img src="images/design2.jpg" alt="Traditional Design" class="design-image">
+                            <h5>Traditional Design</h5>
                             <p>A classic and elegant mehndi design for traditional events.</p>
-                            <span>Price: $100</span>
                         </div>
                         <div>
                             <button class="btn btn-primary btn-sm">Edit</button>
@@ -53,7 +52,7 @@
                         </div>
                     </div>
                 </li>
-                <!-- More services can be added here -->
+                <!-- More designs can be added here -->
             </ul>
         </div>
     </div>

@@ -3,19 +3,22 @@ import { InternalService } from './../../Services/internal.service';
 import { Component, Inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Router } from '@angular/router';
-// import { CommonModule } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ProfessionalService } from '../../Services/professional.service';
 
+
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [RouterLink, FormsModule, RouterModule],
+  imports: [RouterLink, FormsModule, RouterModule,CommonModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
+  isVisible = true;
+  loginFullName="";
   profObj:any={
     Email:'',
     Password:''
@@ -36,9 +39,10 @@ export class LoginComponent {
           if(response.token)
           {
              // Store token in localStorage or as per your application design
-             localStorage.setItem('authToken',response.token);
-             this.internalService.startInterval();
-             this.router.navigate(['/professional/prof-dashboard']);
+              localStorage.setItem('authToken',response.token);
+              localStorage.setItem('professionalDetails', JSON.stringify(response.loginResponse.professionalDetails));
+              this.internalService.startInterval();
+              this.router.navigate(['/professional/prof-dashboard']);
           }else {
             // Handle login failure
             alert('Invalid login credentials');
@@ -96,6 +100,10 @@ export class LoginComponent {
     // Here you would handle the authentication logic
     // If authentication is successful, navigate to the Professional Dashboard
     
+  }
+
+  toggelSignUp(){
+    this.isVisible = !this.isVisible;
   }
 
 }

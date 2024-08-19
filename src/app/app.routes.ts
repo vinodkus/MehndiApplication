@@ -13,6 +13,7 @@ import { ProfServicesComponent } from './Professionals/prof-services/prof-servic
 import { ProfSettingsComponent } from './Professionals/prof-settings/prof-settings.component';
 import { SignupProfessionalComponent } from './signup-professional/signup-professional.component';
 import { SignupCustomerComponent } from './signup-customer/signup-customer.component';
+import { ProfDesignsComponent } from './Professionals/prof-designs/prof-designs.component';
 
 
 export const routes: Routes = [
@@ -66,6 +67,9 @@ export const routes: Routes = [
             },
             {
                 path:'professional/prof-services',component:ProfServicesComponent
+            },
+            {
+                path:'professional/prof-designs',component:ProfDesignsComponent
             },
             {
                 path:'professional/prof-settings',component:ProfSettingsComponent

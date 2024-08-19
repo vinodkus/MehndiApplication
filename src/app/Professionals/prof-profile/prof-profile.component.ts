@@ -8,5 +8,18 @@ import { Component } from '@angular/core';
   styleUrl: './prof-profile.component.css'
 })
 export class ProfProfileComponent {
+  /**
+   *
+   */
+profFullName="";
+
+  constructor() {
+    const professionalDetails = JSON.parse(localStorage.getItem('professionalDetails') || '{}');
+    this.profFullName = professionalDetails.fullName;
+    
+  }
+  onPersonalInfoSubmit(){
+    // console.log("Personal Info Submitted");
+  }
 
 }

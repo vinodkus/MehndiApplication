@@ -3,6 +3,8 @@ import { Router, RouterOutlet } from '@angular/router';
 import { RouterLink, RouterModule, Routes } from '@angular/router';
 import { InternalService } from '../../Services/internal.service';
 
+
+
 @Component({
   selector: 'app-prof-left-menu',
   standalone: true,
@@ -11,6 +13,7 @@ import { InternalService } from '../../Services/internal.service';
   styleUrl: './prof-left-menu.component.css'
 })
 export class ProfLeftMenuComponent {
+  sidebarVisible: boolean = false;
   /**
    *
    */
@@ -20,6 +23,9 @@ export class ProfLeftMenuComponent {
   logout(){
     this.internalService.stopInterval();
     this.router.navigate(['/login']);
+  }
+  toggleSidebar() {
+    this.sidebarVisible = !this.sidebarVisible;
   }
 
 }
