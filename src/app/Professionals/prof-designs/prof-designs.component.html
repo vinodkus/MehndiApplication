@@ -5,21 +5,21 @@
             <h3>Add New Design</h3>
         </div>
         <div class="card-body">
-            <form>
+            <form (submit)="onSubmitDesignForm($event)" id="MehndiDesignForm">
                 <div class="mb-3">
-                    <label for="designName" class="form-label">Design Name</label>
-                    <input type="text" class="form-control" id="designName" placeholder="Enter design name" required>
+                  <label for="designName" class="form-label">Design Name</label>
+                  <input type="text" class="form-control" id="designName" name="designName" placeholder="Enter design name" required>
                 </div>
                 <div class="mb-3">
-                    <label for="designDescription" class="form-label">Design Description</label>
-                    <textarea class="form-control" id="designDescription" rows="3" placeholder="Enter design description" required></textarea>
+                  <label for="designDescription" class="form-label">Design Description</label>
+                  <textarea class="form-control" id="designDescription" name="designDescription" rows="3" placeholder="Enter design description" required></textarea>
                 </div>
                 <div class="mb-3">
-                    <label for="designImage" class="form-label">Design Image</label>
-                    <input type="file" class="form-control" id="designImage" accept="image/*" required>
+                  <label for="designImage" class="form-label">Design Image</label>
+                  <input type="file" class="form-control" id="designImage" accept="image/*" required>
                 </div>
                 <button type="submit" class="btn btn-primary w-100">Add Design</button>
-            </form>
+              </form>              
         </div>
     </div>
     <h3 class="mt-4">Existing Designs</h3>

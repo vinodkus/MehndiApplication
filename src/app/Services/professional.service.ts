@@ -25,4 +25,10 @@ export class ProfessionalService {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     return this.http.post(`${this.apiUrl}/Professional/SignupProfessional`, JSON.stringify(signupData), { headers });
   }
+
+ addMehndiDesign(mehndiDesign:any):Observable<any>{
+  debugger;
+  const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+  return this.http.post(`${this.apiUrl}/MehndiDesign/AddMehndiDesign`, JSON.stringify(mehndiDesign), { headers });
+ } 
 }
