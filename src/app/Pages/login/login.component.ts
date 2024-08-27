@@ -38,6 +38,7 @@ export class LoginComponent {
         next:(response) =>{
           if(response.token)
           {
+            debugger;
              // Store token in localStorage or as per your application design
               localStorage.setItem('authToken',response.token);
               localStorage.setItem('professionalDetails', JSON.stringify(response.loginResponse.professionalDetails));

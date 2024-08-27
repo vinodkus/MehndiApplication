@@ -12,12 +12,12 @@ import { MehndiDesignService } from '../../Services/mehndi-design.service';
 
 export class ProfDesignsComponent {
   
-  mehndiDesign:any={
-    designName:"",
-    designDescription:"",
-    profId:"",
-    image:""
-  }
+  // mehndiDesign:any={
+  //   designName:"",
+  //   designDescription:"",
+  //   profId:"",
+  //   image:""
+  // }
   formValue:any;
  
   constructor(private mehndiDesignService: MehndiDesignService) {}
@@ -30,9 +30,12 @@ export class ProfDesignsComponent {
     debugger;
     event.preventDefault();
     const form = event.target;
+    const prof=localStorage.getItem('professionalDetails')
+    const profId=JSON.parse(prof!).professionalID
+    debugger;
     const formData = new FormData();
     formData.append('DesignID', "0");
-    formData.append('ProfessionalID', "4");
+    formData.append('ProfessionalID', profId);
     formData.append('DesignName', form.designName.value);
     formData.append('DesignDescription', form.designDescription.value);
     formData.append('Mode', "1");
