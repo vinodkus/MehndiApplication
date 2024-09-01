@@ -8,17 +8,17 @@
             <form (submit)="onSubmitDesignForm($event)" id="MehndiDesignForm">
                 <div class="mb-3">
                   <label for="designName" class="form-label">Design Name</label>
-                  <input type="text" class="form-control" id="designName" name="designName" placeholder="Enter design name" required>
+                  <input type="text" class="form-control" id="designName" name="designName" [(ngModel)]="designFormData.designName" placeholder="Enter design name" required>
                 </div>
                 <div class="mb-3">
                   <label for="designDescription" class="form-label">Design Description</label>
-                  <textarea class="form-control" id="designDescription" name="designDescription" rows="3" placeholder="Enter design description" required></textarea>
+                  <textarea class="form-control" id="designDescription" name="designDescription" rows="3" placeholder="Enter design description" [(ngModel)]="designFormData.designDescription" required></textarea>
                 </div>
                 <div class="mb-3">
                   <label for="designImage" class="form-label">Design Image</label>
-                  <input type="file" class="form-control" id="designImage" accept="image/*" required>
+                  <input type="file" class="form-control" id="designImage" accept="image/*" (change)="onFileSelected($event)" [required]="!isEditMode">
                 </div>
-                <button type="submit" class="btn btn-primary w-100">Add Design</button>
+                <button type="submit" class="btn btn-primary w-100">{{ isEditMode ? 'Update Design' : 'Add Design' }}</button>
               </form>              
         </div>
     </div>
@@ -26,33 +26,19 @@
     <div class="card">
         <div class="card-body">
             <ul class="list-group">
-                <li class="list-group-item">
+                <li class="list-group-item" *ngFor="let design of designs">
                     <div class="d-flex justify-content-between align-items-center">
                         <div>
-                            <img src="images/design1.jpg" alt="Bridal Design" class="design-image">
-                            <h5>Bridal Design</h5>
-                            <p>A beautiful and intricate bridal mehndi design.</p>
+                            <img [src]="design.imagePath" alt="{{design.designName}}" class="design-image">
+                            <h5>{{design.designName}}</h5>
+                            <p>{{design.designDescription}}</p>
                         </div>
                         <div>
-                            <button class="btn btn-primary btn-sm">Edit</button>
-                            <button class="btn btn-danger btn-sm">Delete</button>
+                            <button class="btn btn-primary btn-sm" (click)="onEditDesign(design)">Edit</button>
+                            <button class="btn btn-danger btn-sm" (click)="onDeleteDesign(design.designID)">Delete</button>
                         </div>
                     </div>
                 </li>
-                <li class="list-group-item">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div>
-                            <img src="images/design2.jpg" alt="Traditional Design" class="design-image">
-                            <h5>Traditional Design</h5>
-                            <p>A classic and elegant mehndi design for traditional events.</p>
-                        </div>
-                        <div>
-                            <button class="btn btn-primary btn-sm">Edit</button>
-                            <button class="btn btn-danger btn-sm">Delete</button>
-                        </div>
-                    </div>
-                </li>
-                <!-- More designs can be added here -->
             </ul>
         </div>
     </div>
