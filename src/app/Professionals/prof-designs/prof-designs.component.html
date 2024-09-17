@@ -14,6 +14,10 @@
                   <label for="designDescription" class="form-label">Design Description</label>
                   <textarea class="form-control" id="designDescription" name="designDescription" rows="3" placeholder="Enter design description" [(ngModel)]="designFormData.designDescription" required></textarea>
                 </div>
+                <div class="mb-3"  *ngIf="isEditMode">
+                    <label for="designDescription" class="form-label">Design Description</label>
+                    <img [src]="this.baseUrl+designFormData.designImageName" alt="{{designFormData.designName}}" class="design-image" width="200" height="200">                   
+                  </div>
                 <div class="mb-3">
                   <label for="designImage" class="form-label">Design Image</label>
                   <input type="file" class="form-control" id="designImage" accept="image/*" (change)="onFileSelected($event)" [required]="!isEditMode">
@@ -29,7 +33,7 @@
                 <li class="list-group-item" *ngFor="let design of designs">
                     <div class="d-flex justify-content-between align-items-center">
                         <div>
-                            <img [src]="design.imagePath" alt="{{design.designName}}" class="design-image">
+                            <img [src]="design.imagePath" alt="{{design.designName}}" class="design-image" width="200" height="200">
                             <h5>{{design.designName}}</h5>
                             <p>{{design.designDescription}}</p>
                         </div>

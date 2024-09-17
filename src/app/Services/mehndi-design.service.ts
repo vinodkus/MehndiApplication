@@ -19,6 +19,9 @@ export class MehndiDesignService {
   addMehndiDesign(designData: FormData):Observable<AddMehndiDesignResponse> {
     return this.http.post<AddMehndiDesignResponse>(`${this.apiUrl}/Mehndi/AddMehndiDesign`, designData);
   }
+  updateMehndiDesign(designData: FormData):Observable<AddMehndiDesignResponse> {
+    return this.http.post<AddMehndiDesignResponse>(`${this.apiUrl}/Mehndi/UpdateMehndiDesign`, designData);
+  }
   getDesigns(professionalID: number): Observable<any[]> {
     return this.http.get<any[]>(`${this.apiUrl}/Mehndi/GetDesigns?professionalID=${professionalID}`);
   }
