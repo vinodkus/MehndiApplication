@@ -42,7 +42,8 @@ export class LoginComponent {
              // Store token in localStorage or as per your application design
               localStorage.setItem('authToken',response.token);
               localStorage.setItem('professionalDetails', JSON.stringify(response.loginResponse.professionalDetails));
-              this.internalService.startInterval();
+              
+              this.internalService.startInterval(response.loginResponse.professionalDetails.professionalID);
               this.router.navigate(['/professional/prof-dashboard']);
           }else {
             // Handle login failure
@@ -77,7 +78,7 @@ export class LoginComponent {
           {
              // Store token in localStorage or as per your application design
              localStorage.setItem('authToken',response.token);
-             this.internalService.startInterval();
+             this.internalService.startInterval("abc");
              this.router.navigate(['/home']);
           }else {
             // Handle login failure

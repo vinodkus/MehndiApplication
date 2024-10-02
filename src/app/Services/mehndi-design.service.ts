@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
 import { Observable } from 'rxjs';
@@ -16,16 +16,32 @@ export class MehndiDesignService {
   this.apiUrl = environment.apiUrl;
 
    }
+   // Helper method to create headers with the authorization token
+  private createAuthorizationHeader(): HttpHeaders {
+    debugger;
+    const token = localStorage.getItem('authToken'); // Assuming you are storing the JWT in localStorage
+    debugger;
+
+    return new HttpHeaders({
+      'Authorization': `Bearer ${token}`
+    });
+  }
   addMehndiDesign(designData: FormData):Observable<AddMehndiDesignResponse> {
-    return this.http.post<AddMehndiDesignResponse>(`${this.apiUrl}/Mehndi/AddMehndiDesign`, designData);
+    const headers = this.createAuthorizationHeader();
+
+    return this.http.post<AddMehndiDesignResponse>(`${this.apiUrl}/Mehndi/AddMehndiDesign`, designData, { headers });
   }
   updateMehndiDesign(designData: FormData):Observable<AddMehndiDesignResponse> {
-    return this.http.post<AddMehndiDesignResponse>(`${this.apiUrl}/Mehndi/UpdateMehndiDesign`, designData);
+    const headers = this.createAuthorizationHeader();
+
+    return this.http.post<AddMehndiDesignResponse>(`${this.apiUrl}/Mehndi/UpdateMehndiDesign`, designData, { headers });
   }
   getDesigns(professionalID: number): Observable<any[]> {
-    return this.http.get<any[]>(`${this.apiUrl}/Mehndi/GetDesigns?professionalID=${professionalID}`);
+    const headers = this.createAuthorizationHeader();
+    return this.http.get<any[]>(`${this.apiUrl}/Mehndi/GetDesigns?professionalID=${professionalID}`, { headers });
   }
   deleteDesign(designId:number):Observable<any>{
-    return this.http.delete<any>(`${this.apiUrl}/Mehndi/DeleteDesign?designId=${designId}`);
+    const headers = this.createAuthorizationHeader();
+    return this.http.delete<any>(`${this.apiUrl}/Mehndi/DeleteDesign?designId=${designId}`, { headers });
   }
 }

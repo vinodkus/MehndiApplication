@@ -21,8 +21,15 @@ export class ProfLeftMenuComponent {
     
   }
   logout(){
-    this.internalService.stopInterval();
-    this.router.navigate(['/login']);
+    // Stop any ongoing intervals or services
+  this.internalService.stopInterval();
+  
+  // Clear localStorage/sessionStorage data related to authentication
+  localStorage.removeItem('authToken'); // Remove the JWT token or any stored user details
+  localStorage.removeItem('professionalDetails'); // Remove professional details
+  
+  // Redirect to login page after logout
+  this.router.navigate(['/login']);
   }
   toggleSidebar() {
     this.sidebarVisible = !this.sidebarVisible;

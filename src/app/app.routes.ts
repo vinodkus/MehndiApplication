@@ -14,6 +14,7 @@ import { ProfSettingsComponent } from './Professionals/prof-settings/prof-settin
 import { SignupProfessionalComponent } from './signup-professional/signup-professional.component';
 import { SignupCustomerComponent } from './signup-customer/signup-customer.component';
 import { ProfDesignsComponent } from './Professionals/prof-designs/prof-designs.component';
+import { AuthGuard } from './Guard/Auth.guard';
 
 
 export const routes: Routes = [
@@ -69,7 +70,7 @@ export const routes: Routes = [
                 path:'professional/prof-services',component:ProfServicesComponent
             },
             {
-                path:'professional/prof-designs',component:ProfDesignsComponent
+                path:'professional/prof-designs',component:ProfDesignsComponent, canActivate: [AuthGuard]
             },
             {
                 path:'professional/prof-settings',component:ProfSettingsComponent

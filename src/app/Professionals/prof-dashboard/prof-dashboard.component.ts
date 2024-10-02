@@ -13,7 +13,7 @@ profFullName="";
 ngOnInit() {
   const token = localStorage.getItem('authToken');
   const professionalDetails = JSON.parse(localStorage.getItem('professionalDetails') || '{}');
-
+  
   console.log('Token:', token);
   console.log('Professional Details:', professionalDetails);
 debugger;
